@@ -1,0 +1,139 @@
+body {
+    background-color: antiquewhite;
+}
+
+.text-button {
+    padding: 20px 40px;
+    display: block;
+    border: none;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.text-description, .text-headline {
+    text-align: center;
+}
+
+
+.text-headline {
+    animation: headline 2s;
+}
+
+.text-description {
+    animation: description 2s;
+}
+
+.text-button {
+    animation: button 2s;
+}
+
+@keyframes headline {
+    0% {
+        position: relative;
+        top: -500px;
+    }
+
+    100% {
+        position: relative;
+        top: 0;
+    }
+
+}
+
+@keyframes description {
+    0% {
+        position: relative;
+        left: -1000px;
+    }
+
+    100% {
+        position: relative;
+        left: 0;
+    }
+}
+
+@keyframes button {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.loading {
+    position: relative;
+    height: 40px;
+    width: 40px;
+    transform: rotate(45deg);
+    margin: 100px auto;
+    animation: loading 2s;
+    animation-iteration-count: infinite;
+
+}
+
+.loading span {
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    animation: move 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+.loading span:nth-child(1) {
+    top: 0;
+    left: 0;
+    background-color: aqua;
+}
+
+.loading span:nth-child(2) {
+    top: 0;
+    right: 0;
+    background-color: #fcb603;
+}
+
+.loading span:nth-child(3) {
+    bottom: 0;
+    right: 0;
+    background-color: #af49b6;
+}
+
+
+.loading span:nth-child(4) {
+    bottom: 0;
+    left: 0;
+    background-color: #e03870;
+}
+
+@keyframes move {
+    0% {
+        transform: rotate(0deg);
+    }
+    65% {
+        transform: rotate(-40deg);
+    }
+
+    100% {
+        transform: rotate(0deg); 
+    }
+}
+
+@keyframes loading {
+    0% {
+        height: 40px;
+        width: 40px;
+    }
+
+    65% {
+        width: 70px;
+        height: 70px;
+    }
+    100% {
+        width: 40px;
+        height: 40px;
+    }
+}

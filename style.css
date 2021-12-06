@@ -1,0 +1,68 @@
+.container {
+    height: 400px;
+    width: 600px;
+    background-color: antiquewhite;
+}
+
+.element {
+    width: 200px;
+    height: 150px;
+    background-color: red;
+    position: relative;
+   /* transition-property: all;
+    transition-duration: 3s;
+    transition-timing-function: cubic-bezier(0.12,-0.14, 0.32, 1.15);
+    transition-delay: 1s;*/
+   /* transition: all 3s;*/
+    animation-name: move;
+    animation-duration: 4s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    /*animation-delay: 2s;*/
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+    /*animation-play-state: paused;*/
+    animation: move 4s ease-in 0 infinite alternate forwards;
+}
+
+@keyframes move {
+    0% {
+        top: 0;
+        left: 0;
+        border-radius: 5px;
+        background-color: red;
+    }
+    25% {
+        top: 0;
+        left: 400px;
+        border-radius: 20px;
+        background-color: brown;
+   
+    }
+    50% {
+        left: 400px;
+        top: 250px;
+        border-radius: 30px;
+        background-color: aqua;
+    }
+
+    75% {
+        top: 250px;
+        left: 0;
+        border-radius: 50px;
+        background-color: beige;
+    }
+    100% {
+        border-radius: 0;
+        top: 0;
+        left: 0;
+        background-color: green;
+    }
+}
+
+
+/*.element:hover {
+    background-color: green;
+    width: 600px;
+    height: 400px;
+}*/
